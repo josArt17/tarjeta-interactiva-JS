@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarjeta interactiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        
+        <section class="tarjeta" id="tarjeta">
+
+            <!-- PARTE DELANTERA -->
+            <div class="front">
+                <div class="logo_marca" id="logo-marca">
+                    <img src="./img/logos/visa.png" alt="">
+                </div>
+                <img src="./img/chip-tarjeta.png" class="chip" alt="">
+                <div class="datos">
+                    <div class="grupo" id="numero">
+                        <p class="label">Numero de Tarjeta</p>
+                        <p class="numero">#### #### #### ####</p>
+                    </div>
+                    <div class="flexbox">
+                        <div class="grupo" id="nombre">
+                            <p class="label">Nombre del titular</p>
+                            <p class="nombre">Nombre Apellido(s)</p>
+                        </div>
+                        <div class="grupo" id="expiracion">
+                            <p class="label">Expiracion</p>
+                            <p class="expiracion"><span class="mes">MM</span> / <span class="year">AAAA</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARTE TRASERA -->
+
+            <div class="trasera">
+                
+                <div class="barra-magnetica"></div>
+                
+                <div class="datos">
+                    
+                    <div class="grupo" id="firma">
+                        <p class="label">Firma</p>
+                        <div class="firma"><p></p></div>
+                    </div>
+                    
+                    <div class="grupo" id="ccv">
+                        <p class="label">CCV</p>
+                        <p class="ccv"></p>
+                    </div>
+                </div>
+                
+                <p class="leyenda">
+                    Lorem ipsum dolor sit amet consectetur adipisicing.
+                </p>
+                
+                <a href="#" class="link-banco">www.tubanco.com</a>
+            </div>
+        </section>
+
+        <!-- BOTON ABRIR FORMULARIO -->
+
+        <div class="contenedor-btn">
+            <button class="btn-abrir-formulario" id="btn-abrir-formulario">
+                <i class="fas fa-plus" id="icono"></i>
+            </button>
+        </div>
+
+         <!-- FORMULARIO -->
+
+        <form action="" class="formulario-tarjeta" id="formulario-tarjeta">
+            <div class="grupo">
+                <label for="inputNumero">Número de tarjeta</label>
+                <input type="text" name="inputNumero" id="inputNumero" maxlength="19" autocomplete="off">
+            </div>
+
+            <div class="grupo">
+                <label for="inputNombre">Nombre</label>
+                <input type="text" name="inputNombre" id="inputNombre" maxlength="19" autocomplete="off">
+            </div>
+
+            <div class="flexbox">
+                <div class="grupo expira">
+                    <label for="selectMes">Fecha</label>
+                    <div class="flexbox">
+                        <div class="grupo-select">
+                            <select name="mes" id="selectMes">
+                                <option disabled selected>Mes</option>
+
+                            </select>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+
+                        <div class="grupo-select">
+                            <select name="year" id="selectYear">
+                                <option disabled selected>Año</option>
+
+                            </select>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grupo ccv">
+                    <label for="inputCCV">CCV</label>
+                    <input type="text" name="inputCCV" id="inputCCV" maxlength="4">
+                </div>
+            </div>
+
+            <input type="submit" value="Enviar" class="btn-enviar">
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/3bcbb0a983.js" crossorigin="anonymous"></script>
+</body>
+</html>
